@@ -1,0 +1,7 @@
+{
+  "name": "DI06_TE01_plantilla",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      Visualización de Datos
+    </ion-title>
+  </ion-toolbar>
+  <ion-button (click)="generarPDF()">Generar PDF</ion-button>
+</ion-header>
+
+<ion-content>
+  <div #container>
+    <div class="seccion header">
+      <h1>Dashboard</h1>
+    </div>
+
+    <div class="seccion" style="display: inline-flex; width: 100%;">
+      <div class="chart-container">
+        <h2>Bar Chart</h2>
+        <app-bar-chart [nombresCategorias]="categorias" [borderColorCategorias]="borderColorCat" [backgroundColorCategorias]="backgroundColorCat"></app-bar-chart>
+      </div>
+      <div class="chart-container">
+        <h2>Pie Chart</h2>
+        <app-pie-chart></app-pie-chart>
+      </div>
+      <div class="chart-container">
+        <h2>Line Chart</h2>
+        <app-line-chart></app-line-chart>
+      </div>
+    </div>
+
+    <div class="table-container">
+      <app-tablas [datosTabla]="datosTablaTab1"></app-tablas>
+    </div>
+
+    <div class="seccion list-container">
+      <h2>List</h2>
+        <ul *ngFor="let lista of datosLista">
+          <li>{{lista}}</li>
+        </ul>
+    </div>
+
+    <div class="table-container">
+      <app-tablas [datosTabla]="datosTablaTab1"></app-tablas>
+    </div>
+  </div>
+
+</ion-content>
